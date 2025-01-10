@@ -27,9 +27,7 @@ jobs:
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
           
       - name: Save last date
-        id: date
-        # echo date into public/date.txt
-        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> ./public/date.txt
+        run: echo $(date +"%Y-%m-%d %H:%M:%S %Z") > public/date.txt
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
