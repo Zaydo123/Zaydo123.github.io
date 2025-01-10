@@ -24,7 +24,7 @@ jobs:
         with:
           htmlFile: ./resume.html
           outputFile: ./public/resume.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+          pdfOptions: '{"format": "A4", "preferCSSPageSize": true}'
           
       - name: Save last date
         run: echo $(date +"%Y-%m-%d %H:%M:%S %Z") > public/date.txt
