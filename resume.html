@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<!-- Supposed to print a resume in a PDF format. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    /* Set content to fill the entire A4 page */
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    html {
+        background-color: #93b3b3;
+    }
+
+    /* Style content with shaded background */
+    .content {
+        width: 100%;
+        /* Adjust the width as needed */
+        height: 95%;
+        /* Adjust the height as needed*/
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        background-color: #f8fdfd;
+        /* Light gray shade */
+    }
+
+    .hr {
+        border: 0;
+        border-top: 2px solid #07234f;
+        height: 2px;
+        width: 300px;
+    }
+
+    .hr-hard {
+        padding-top: 5px;
+        border: 0;
+        border-top: 2px solid #07234f;
+        height: 2px;
+        width: 100%;
+    }
+
+    .hr-soft {
+        border: 0;
+        padding-top: 5px;
+        border-top: 1px solid #07234f;
+        height: 1px;
+        width: 100%;
+    }
+
+    .section-header {
+        color: #07234f;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .w-95 {width: 95%;}
+    .black {color: #000;}
+    .center {text-align: center;}
+    .pl-1 {padding-left: 1em;}
+    .pr-1 {padding-right: 1em;}
+    .pb-1 {padding-bottom: 1em;}
+    .pt-1 {padding-top: 1em;}
+    .pl-2 {padding-left: 2em;}
+    .pr-2 {padding-right: 2em;}
+    .pb-2 {padding-bottom: 2em;}
+    .pt-2 {padding-top: 2em;}
+    .pt-5px {padding-top: 5px;}
+    .pb-5px {padding-bottom: 5px;}
+    .bold {font-weight: bold;}
+    .underline {text-decoration: underline;}
+    .italic {font-style: italic;}
+
+
+    .experience-header {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between
+    }   
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        gap:10px
+    }
+    
+</style>
+
+<html>
+
+    <body>
+                
+        <div class="content">
+            
+            <div class="pb-5px">
+                <div class="center">
+                    <h1 class="black">Zayd Alzein</h1>
+                </div>
+    
+                <div class="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1em;">
+                    
+                    <div>
+                        <img src="./linkedin.png" alt="LinkedIn" width="20" height="20">
+                        <a href="https://www.linkedin.com/in/zayd-alzein-91888a25b/" target="_blank" style="text-decoration: none; color: #000; vertical-align: 3px;">Zayd Alzein</a>
+                    </div>
+    
+                    <div>
+                        <img src="./github.png" alt="GitHub" width="20" height="20">
+                        <a href="https://github.com/Zaydo123" target="_blank" style="text-decoration: none; color: #000; vertical-align: 3px;">Zaydo123</a>   
+                    </div>
+    
+                    <div>
+                        <img src="./email.png" alt="Email" width="20" height="20">
+                        <a href="mailto:zalze2@uic.edu" style="text-decoration: none; color: #000; vertical-align: 3px;">zalze2@uic.edu</a>
+                    </div>
+    
+                </div>
+            </div>    
+
+            <hr class="hr-hard w-95">
+
+            <h2 class="section-header">Education</h2>
+            <div class="pb-5px">
+                <p class="black bold pr-1">University of Illinois at Chicago</p>
+                <p class="black">Bachelor of Science in Computer Science</p>
+                <p class="black">August 2023 - December 2026</p>
+            </div>
+            
+            <hr class="hr-soft w-95">
+            
+            <h2 class="section-header">Experience</h2>    
+            <div class="experience pb-5px">
+            
+                <div class="experience-item">
+                    
+                    <div class="experience-header">
+                        <p class="black bold pb-5px">Incoming Software Engineering Intern, Cboe</p>
+                        <p class="black pr-1 italic">June 2025 - August 2025</p>
+                    </div>
+
+                    <div class="black pl-2">
+                        <ul><li>Low latency quote generation and pricing team</li></p>
+                    </div>
+
+
+                </div>
+                
+                <div class="experience-item">
+                    
+                    <div class="experience-header">
+                        <p class="black bold pb-5px">Software Engineer, UIC Student Affairs Technology</p>
+                        <p class="black pr-1 italic">November 2023 - Present</p>
+                    </div>
+                    
+                    <div class="black pl-2">
+                        <ul>
+                            <li>Established connections with the CTA and wrote automated ETL pipelines processing over <span class="italic">$2.4M</span> of subscriptions per quarter</li>
+                            <li>Rewrote the university locker management system, managing over 1,800 lockers and servicing over <span class="italic">5,000 students</span> per semester</li>
+                            <li>Ported legacy Node.js applications to ASP.NET and created CI/CD pipelines using Docker, GitHub Actions, and Azure publish profiles</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        
+            <hr class="hr-soft w-95">
+
+            
+            
+            <h2 class="section-header">Extracurricular Involvement</h2>
+            
+            <div class="experience">
+
+                <div class="experience-item">        
+                    
+                    <div class="experience-header">
+                        <p class="black bold pb-5px">Developer, SIG Quantitative Trading (ACM)</p>
+                        <p class="black pr-1 italic">December 2023 - Present</p>
+                    </div>
+
+                    <div class="black pl-2">
+                        <ul>
+                            <li>Developed RSS feed parsers for financial news to power sentiment analysis algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <p class="black bold pb-5px">Member, Google Developer Student Clubs (GDSC UIC)</p>
+                        <p class="black pr-1 italic">October 2023 - Present</p>
+                    </div>
+
+                    <div class="black pl-2">
+                        <ul>
+                            <li>Attended technical workshops on Google technologies and software development practices</li>
+                        </ul>
+                </div>
+
+    
+            </div>
+            
+            
+            
+        </div>
+    </body>
+
+</html>
