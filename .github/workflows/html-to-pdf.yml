@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Update PDF
+
 on: 
   push:
     branches:
@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - master
+
+permissions:
+  contents: write
 
 jobs:
   html-to-pdf:
@@ -24,6 +27,7 @@ jobs:
           
       - name: Save last date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d') > ./public/date.txt"
+        # echo date into public/date.txt
+        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> ./public/date.txt
 
-
+          
