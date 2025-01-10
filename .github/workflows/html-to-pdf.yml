@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      
   pull_request:
     branches:
       - master
@@ -19,13 +20,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: html to pdf
-        uses: fifsky/html-to-pdf-action@master
-        with:
-          htmlFile: ./resume.html
-          outputFile: ./public/resume.pdf
-          pdfOptions: '{"format": "A4", "preferCSSPageSize": true, "printBackground": true}'
-          
       - name: Save last date
         run: echo $(date +"%Y-%m-%d %H:%M:%S %Z") > public/date.txt
 
