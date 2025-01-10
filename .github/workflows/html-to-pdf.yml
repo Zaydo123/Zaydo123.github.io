@@ -10,7 +10,8 @@ on:
 
 permissions:
   contents: write
-
+  pull-requests: write
+  
 jobs:
   html-to-pdf:
     runs-on: ubuntu-latest
@@ -30,4 +31,10 @@ jobs:
         # echo date into public/date.txt
         run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> ./public/date.txt
 
-          
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: master
+          commit_options: '--no-verify --signoff'
+          file_pattern: public/*
+          commit_message: "Update PDF"
