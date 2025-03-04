@@ -17,7 +17,7 @@
 
     @page {
         size: A4;
-        margin: 0;
+        margin: 4mm;
     }
 
     /* Set content to fill the entire A4 page */
@@ -153,9 +153,13 @@
 
             <h2 class="section-header">Education</h2>
             <div class="pb-5px experience-item">
-                <p class="black bold pr-1">University of Illinois at Chicago</p>
-                <p class="black">Bachelor of Science in Computer Science</p>
-                <p class="black">August 2023 - December 2026</p>
+                <div class="experience-header" style="padding-bottom: 4px;">
+                    <p class="black bold pr-1">University of Illinois at Chicago</p>
+                    <p>August 2023 - December 2026</p>
+                </div>
+
+                    <p class="black">Bachelor of Science in Computer Science</p>
+                    <p class="italic">Dean's List, Spring 2024</p>
             </div>
             
             <hr class="hr-soft w-95">
@@ -171,7 +175,7 @@
                     </div>
 
                     <div class="black pl-2">
-                        <ul><li>Low latency quote generation and pricing team</li></p>
+                        <ul><li>Low latency and highly concurrent price feed processing for the Cboe Options Exchange</li></ul>
                     </div>
 
 
@@ -198,54 +202,24 @@
         
             <hr class="hr-soft w-95">
 
-            <h2 class="section-header">Extracurricular Involvement</h2>
             
-            <div class="experience">
-
-                <div class="experience-item">        
-                    
-                    <div class="experience-header">
-                        <p class="black bold pb-5px">Developer, SIG Quantitative Trading (ACM)</p>
-                        <p class="black pr-1 italic">December 2023 - Present</p>
-                    </div>
-
-                    <div class="black pl-2">
-                        <ul>
-                            <li>Developed RSS feed parsers for financial news to power sentiment analysis algorithms</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <p class="black bold pb-5px">Member, Google Developer Student Clubs (GDSC UIC)</p>
-                        <p class="black pr-1 italic">October 2023 - Present</p>
-                    </div>
-
-                    <div class="black pl-2">
-                        <ul>
-                            <li>Attended technical workshops on Google technologies and software development practices</li>
-                        </ul>
-                </div>
-
-            </div>
-
-
+            
+            
             <h2 class="section-header">Projects</h2>
             
             <div class="experience pb-1">
-
+                
                 <div class="experience-item">
-
+                    
                     <div class="experience-header">
-
+                        
                         <div style="display: flex; flex-direction: column;">
                             <p class="black bold"><a href="https://github.com/Ionic-Crypto" target="_blank">Ionic - IWS</a></p>
                             <sub class="italic" style="color:#5b5960">Closed SRC</sub>
                         </div>
                         <p class="black pr-1 italic">December 2024 - Present</p>
                     </div>
-
+                    
                     <div class="black pl-2">
                         <ul>
                             <li>Developed a managed payment gateway system up to <span class="italic">25.9M%</span> faster than ACH for international settlement</li>
@@ -254,17 +228,17 @@
                             <li>Used AWS Keystore to securely handle master encryption keys for Heirarchical Deterministic Wallets</li>
                         </ul>
                     </div>
-
-
+                    
+                    
                 </div>
-
+                
                 <div class="experience-item">
-
+                    
                     <div class="experience-header">
                         <p class="black bold pb-5px"><a href="https://github.com/Zaydo123/Solana-RPC-Listener/" target="_blank">Solana Token Data Ingestor</a></p>
                         <p class="black pr-1 italic">April 2024</p>
                     </div>
-
+                    
                     <div class="black pl-2">
                         <ul>
                             <li>Engineered a high-throughput blockchain ingestor using Go and Python, optimized for millisecond transaction processing</li>
@@ -273,9 +247,9 @@
                             <li>Reduced database costs by up to 90% by optimizing database compression policies and utilizing Redis for caching</li>
                         </ul>
                     </div>
-
+                    
                 </div>
-
+                
                 
                 <div class="experience-item">
                     
@@ -293,14 +267,14 @@
                     </div>
                     
                 </div>
-
+                
                 <div class="experience-item">
-
+                    
                     <div class="experience-header">
                         <p class="black bold pb-5px"><a target="_blank" href="https://github.com/Zaydo123/html-game-server-svelte">Physics Central</a></p>
                         <p class="black pr-1 italic">October 2021</p>
                     </div>
-
+                    
                     <div class="black pl-2">
                         <ul>
                             <li>Owner and principal developer of an online gaming web platform</li>
@@ -311,12 +285,12 @@
                 </div>
                 
                 <div class="experience-item">
-
+                    
                     <div class="experience-header">
                         <p class="black bold pb-5px"><a target="_blank" href="https://github.com/Zaydo123/UIC-Course-Analyzer">UIC Course Analyzer</a></p>
                         <p class="black pr-1 italic">January 2024</p>
                     </div>
-
+                    
                     <div class="black pl-2">
                         <ul>
                             <li>Scripted a program to parse over a decade of college course data to find the best classes and professors to enroll with</li>
@@ -324,17 +298,59 @@
                         </ul>
                     </div>
                 </div>
-
+                
             </div>
-        </div>
+        
 
         <hr class="hr-soft w-95">
 
-        <h2 class="section-header">Skills</h2>
+        <h2 class="section-header">Achievements and Extracurriculars</h2>
+        
+        <div class="experience pb-1">
 
+
+            <div class="experience-item">        
+                
+                <div class="experience-header">
+                    <p class="black bold pb-5px">HackIllinois Winner, Most Innovative Use of Solana</p>
+                    <p class="black pr-1 italic">February 2025 - March 2025</p>
+                </div>
+
+                <div class="black pl-2">
+                    <ul>
+                        <li>Developed a decentralized, trustless, and transparent git server system using Solana and Arweave</li>
+                        <li>Reimplemented the git protocol to be blockchain-native, allowing for decentralized code hosting and collaboration</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="experience-item">        
+                
+                <div class="experience-header">
+                    <p class="black bold pb-5px">Developer, SIG Quantitative Trading (ACM)</p>
+                    <p class="black pr-1 italic">December 2023 - Present</p>
+                </div>
+
+                <div class="black pl-2">
+                    <ul>
+                        <li>Developing backtracking software for bond-futures arbitrage trading algorithms</li>
+                        <li>Developed RSS feed parsers for financial news to power sentiment analysis algorithms</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+    
+        <hr class="hr-soft w-95">
+        
+        <h2 class="section-header">Skills</h2>
+        
         <div class="experience pl-1" style="font-size: 0.7em;">
             <ul>
-
+                
                 <li><span class="bold">Languages: </span>C#, Java, C, C++, Python, SQL, Go, JavaScript, Typescript, HTML, CSS</li>
                 <li><span class="bold">Frameworks: </span>Node.js, ASP.NET, React, Express, EJS, SvelteKit, Vue.js, Blazor, Flask, FastAPI, Tailwind CSS, Bootstrap</li>
                 <li><span class="bold">Tools: </span>Git, Docker, Kubernetes, Kafka, Redis, AWS, Azure, SQL Server, PostgreSQL, MySQL, MongoDB, TimescaleDB, gRPC, Protobuf</li>
